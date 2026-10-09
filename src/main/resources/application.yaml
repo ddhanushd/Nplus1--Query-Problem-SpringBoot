@@ -15,7 +15,17 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        generate_statistics: true
 
   h2:
     console:
       enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE
